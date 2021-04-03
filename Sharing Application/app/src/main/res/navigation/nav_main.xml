@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hhdeveloper.sharingapplication.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_selectFilesFragment"
+            app:destination="@id/selectFilesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_receiveFilesFragment"
+            app:destination="@id/receiveFilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectFilesFragment"
+        android:name="com.hhdeveloper.sharingapplication.SelectFilesFragment"
+        android:label="fragment_select_files"
+        tools:layout="@layout/fragment_select_files" />
+    <fragment
+        android:id="@+id/receiveFilesFragment"
+        android:name="com.hhdeveloper.sharingapplication.ReceiveFilesFragment"
+        android:label="fragment_receive_files"
+        tools:layout="@layout/fragment_receive_files" />
+</navigation>
