@@ -1,7 +1,6 @@
 package com.hhdeveloper.sharingapplication.fragments
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.hhdeveloper.sharingapplication.Home
 import com.hhdeveloper.sharingapplication.R
 
 
@@ -18,14 +16,13 @@ class SplashFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val time:Long=3000
+        val time:Long=1500
         //MOVE FROM SPLASH SCREEN TO INTRO PAGER AFTER 3 SECOND
         Handler(Looper.getMainLooper()).postDelayed({
             if (onBoardingFinish()){
-                val intent=Intent(requireContext(),Home::class.java)
-                startActivity(intent)
+                findNavController().navigate(R.id.action_splashFragment_to_nav_main)
             }else{
-                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_introScreenFragment)
             }
         }, time)
         // Inflate the layout for this fragment

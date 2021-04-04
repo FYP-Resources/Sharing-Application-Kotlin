@@ -3,6 +3,7 @@ package com.hhdeveloper.sharingapplication.fragments.onboarding.screens
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.hhdeveloper.sharingapplication.R
 import com.hhdeveloper.sharingapplication.databinding.FragmentIntroScreenBinding
@@ -17,7 +18,7 @@ class IntroScreenFragment : Fragment(R.layout.fragment_intro_screen) {
         binding= FragmentIntroScreenBinding.bind(view)
 
         binding.btnNext.setOnClickListener{
-            activity?.findViewById<ViewPager2>(R.id.viewPager)?.currentItem=1
+            findNavController().navigate(R.id.action_introScreenFragment_to_profileScreenFragment)
         }
     }
 }

@@ -10,8 +10,13 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment_to_viewPagerFragment"
-            app:destination="@id/viewPagerFragment"
+            android:id="@+id/action_splashFragment_to_nav_main"
+            app:destination="@id/nav_main"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_introScreenFragment"
+            app:destination="@id/introScreenFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -20,4 +25,40 @@
         android:name="com.hhdeveloper.sharingapplication.fragments.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
+    <fragment
+        android:id="@+id/introScreenFragment"
+        android:name="com.hhdeveloper.sharingapplication.fragments.onboarding.screens.IntroScreenFragment"
+        android:label="fragment_intro_screen"
+        tools:layout="@layout/fragment_intro_screen" >
+        <action
+            android:id="@+id/action_introScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreenFragment"
+        android:name="com.hhdeveloper.sharingapplication.fragments.onboarding.screens.ProfileScreenFragment"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen" >
+        <action
+            android:id="@+id/action_profileScreenFragment_to_permissionScreenFragment"
+            app:destination="@id/permissionScreenFragment" />
+        <action
+            android:id="@+id/action_profileScreenFragment_to_introScreenFragment"
+            app:destination="@id/introScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionScreenFragment"
+        android:name="com.hhdeveloper.sharingapplication.fragments.onboarding.screens.PermissionScreenFragment"
+        android:label="fragment_permission_screen"
+        tools:layout="@layout/fragment_permission_screen" >
+        <action
+            android:id="@+id/action_permissionScreenFragment_to_nav_main"
+            app:destination="@id/nav_main"
+            app:popUpTo="@id/permissionScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_permissionScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+    </fragment>
+    <include app:graph="@navigation/nav_main" />
 </navigation>
