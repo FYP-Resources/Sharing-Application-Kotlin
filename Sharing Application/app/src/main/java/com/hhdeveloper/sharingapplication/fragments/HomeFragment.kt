@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.hhdeveloper.sharingapplication.R
 import com.hhdeveloper.sharingapplication.databinding.FragmentHomeBinding
@@ -15,6 +16,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         binding= FragmentHomeBinding.bind(view)
 
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
         //SET LISTENER
         setListener()
     }
@@ -28,7 +30,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),View.OnClickListener {
         when(v){
             //CLICK ON SEND BUTTON
             binding.btnSend->
-                findNavController().navigate(R.id.action_homeFragment_to_selectFilesFragment)
+                findNavController().navigate(R.id.action_homeFragment_to_selectFragment)
             //CLICK ON RECEIVE BUTTON
             binding.btnReceive->
                 findNavController().navigate(R.id.action_homeFragment_to_receiveFilesFragment)
