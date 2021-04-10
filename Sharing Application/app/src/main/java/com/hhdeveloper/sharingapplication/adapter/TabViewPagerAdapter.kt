@@ -15,5 +15,4 @@ class TabViewPagerAdapter(
     override fun getItemCount(): Int =fragmentList.size
 
     override fun createFragment(position: Int): Fragment =fragmentList[position]
-
 }
