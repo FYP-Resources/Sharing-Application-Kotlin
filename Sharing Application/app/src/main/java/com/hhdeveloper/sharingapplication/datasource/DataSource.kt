@@ -3,6 +3,8 @@ package com.hhdeveloper.sharingapplication.datasource
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
+import android.util.Log
+import com.hhdeveloper.sharingapplication.utils.Constant.TAG
 
 class DataSource(private val context: Context){
 
@@ -14,15 +16,13 @@ class DataSource(private val context: Context){
             sortOrder:String?
     ):Cursor?{
         var cursor:Cursor?=null
-        cursor?.let {
-            cursor=context.contentResolver.query(
+        cursor=context.contentResolver.query(
                 collection,
                 projection,
                 selection,
                 selectionArgs,
                 sortOrder
             )
-        }
         return cursor
     }
 }
