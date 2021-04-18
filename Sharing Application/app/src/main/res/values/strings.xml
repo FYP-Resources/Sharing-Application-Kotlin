@@ -12,7 +12,7 @@
     <string name="btn_next">Next</string>
     <string name="btn_finish">Finish</string>
 
-<!--    NAV FRAGMENT NAME-->
+    <!--    NAV FRAGMENT NAME-->
     <string name="nav_frag_home">Home</string>
     <string name="nav_frag_select">Select</string>
     <string name="nav_frag_receive">Receive</string>

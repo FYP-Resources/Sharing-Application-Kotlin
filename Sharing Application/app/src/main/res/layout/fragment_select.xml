@@ -9,6 +9,9 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
+        app:tabIndicator="@drawable/custom_tab_indicator"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="3dp"
         android:layout_width="match_parent"
         app:layout_scrollFlags="scroll|enterAlways"
         app:tabMode="scrollable"

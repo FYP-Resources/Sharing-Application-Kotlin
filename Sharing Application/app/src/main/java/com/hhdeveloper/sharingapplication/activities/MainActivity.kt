@@ -1,10 +1,11 @@
-package com.hhdeveloper.sharingapplication
+package com.hhdeveloper.sharingapplication.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.hhdeveloper.sharingapplication.R
 
 class MainActivity : AppCompatActivity() {
 

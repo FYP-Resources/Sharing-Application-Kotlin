@@ -2,14 +2,15 @@ package com.hhdeveloper.sharingapplication.fragments.onboarding.screens
 
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.hhdeveloper.sharingapplication.R
+import com.hhdeveloper.sharingapplication.activities.HomeActivity
 import com.hhdeveloper.sharingapplication.databinding.FragmentPermissionScreenBinding
 import com.hhdeveloper.sharingapplication.utils.Constant.CONTACTS_REQUEST_CODE
 import com.hhdeveloper.sharingapplication.utils.Constant.READ_CONTACTS
@@ -39,7 +40,9 @@ class PermissionScreenFragment : Fragment(R.layout.fragment_permission_screen),V
             binding.btnStorage->storagePermission()
             //NEXT BUTTON
             binding.btnFinish->{
-                findNavController().navigate(R.id.action_permissionScreenFragment_to_nav_main)
+//                findNavController().navigate(R.id.action_permissionScreenFragment_to_nav_main)
+                val intent=Intent(activity?.applicationContext,HomeActivity::class.java)
+                startActivity(intent)
                 onBoardingFinish()
             }
         }
