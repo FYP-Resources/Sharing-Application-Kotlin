@@ -1,7 +1,5 @@
 package com.hhdeveloper.sharingapplication.fragments.select
 
-
-
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -32,7 +30,7 @@ class SelectImageFragment : Fragment(R.layout.fragment_select_image) {
     }
 
     private fun setRecyclerAdapter() {
-        val adapter=SelectImageAdapter(requireContext())
+        val adapter = SelectImageAdapter(requireContext())
         binding.recycler.apply {
             this.adapter = adapter
             this.layoutManager = GridLayoutManager(requireContext(), 2)
@@ -43,4 +41,6 @@ class SelectImageFragment : Fragment(R.layout.fragment_select_image) {
             }
         })
     }
+
+
 }
