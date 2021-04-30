@@ -20,6 +20,9 @@
             app:destination="@id/introScreenFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
@@ -63,4 +66,26 @@
             app:destination="@id/profileScreenFragment" />
     </fragment>
     <include app:graph="@navigation/nav_main" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.hhdeveloper.sharingapplication.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_selectFragment2"
+            app:destination="@id/selectFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_receiveFilesFragment2"
+            app:destination="@id/receiveFilesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectFragment2"
+        android:name="com.hhdeveloper.sharingapplication.fragments.SelectFragment"
+        android:label="fragment_select"
+        tools:layout="@layout/fragment_select" />
+    <fragment
+        android:id="@+id/receiveFilesFragment2"
+        android:name="com.hhdeveloper.sharingapplication.fragments.ReceiveFilesFragment"
+        android:label="fragment_receive_files"
+        tools:layout="@layout/fragment_receive_files" />
 </navigation>

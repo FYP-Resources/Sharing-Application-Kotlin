@@ -1,14 +1,14 @@
 package com.hhdeveloper.sharingapplication.fragments
 
 import android.os.Bundle
+import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.hhdeveloper.sharingapplication.R
 import com.hhdeveloper.sharingapplication.databinding.FragmentHomeBinding
+import com.hhdeveloper.sharingapplication.utils.Constant.TAG
 
 class HomeFragment : Fragment(R.layout.fragment_home),View.OnClickListener {
     private lateinit var binding:FragmentHomeBinding
@@ -17,13 +17,9 @@ class HomeFragment : Fragment(R.layout.fragment_home),View.OnClickListener {
         binding= FragmentHomeBinding.bind(view)
 
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        setHasOptionsMenu(true)
         //SET LISTENER
         setListener()
-    }
-
-    private fun setListener() {
-        binding.btnReceive.setOnClickListener(this)
-        binding.btnSend.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -37,5 +33,18 @@ class HomeFragment : Fragment(R.layout.fragment_home),View.OnClickListener {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_home,menu)
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId==R.id.menu_home){
+           Log.d(TAG,"click menu")
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    private fun setListener() {
+        binding.btnReceive.setOnClickListener(this)
+        binding.btnSend.setOnClickListener(this)
+    }
 }

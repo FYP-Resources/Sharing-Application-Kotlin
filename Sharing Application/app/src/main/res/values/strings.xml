@@ -17,4 +17,9 @@
     <string name="nav_frag_select">Select</string>
     <string name="nav_frag_receive">Receive</string>
     <string name="image_description">image</string>
+    <string name="home_menu">home_menu</string>
+    <string name="more_btn">more_btn</string>
+    <string name="text_size">10.1 MB</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

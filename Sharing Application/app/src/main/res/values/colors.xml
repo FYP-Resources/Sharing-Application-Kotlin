@@ -5,6 +5,15 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="primary_color">#29abe2</color>
+
+<!--    BLACK COLOR COMBINATION-->
     <color name="black">#FF000000</color>
+    <color name="black_1">#121212</color>
+    <color name="black_1dp">#1e1e1e</color>
+    <color name="black_4dp">#272727</color>
+    <color name="black_30per">#4d000000</color>
+<!--    WHITE COLOR COMBINATION-->
     <color name="white">#FFFFFFFF</color>
+    <color name="white_80per">#4dffffff</color>
 </resources>

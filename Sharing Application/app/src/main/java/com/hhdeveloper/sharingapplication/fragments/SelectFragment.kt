@@ -13,14 +13,22 @@ import com.hhdeveloper.sharingapplication.fragments.select.*
 
 class SelectFragment : Fragment(R.layout.fragment_select) {
     private lateinit var binding:FragmentSelectBinding
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding= FragmentSelectBinding.bind(view)
 
-        //SHOW ACTION BAR
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        setActionBar()
 
         setTabViewPagerAdapter()
+    }
+
+    private fun setActionBar() {
+        val supportActionBar = (activity as AppCompatActivity?)!!.supportActionBar!!
+        supportActionBar.apply {
+            show()
+            elevation=0f
+        }
     }
 
     private fun setTabViewPagerAdapter() {

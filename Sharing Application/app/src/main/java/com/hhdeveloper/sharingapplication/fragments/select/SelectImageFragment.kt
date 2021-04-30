@@ -35,11 +35,11 @@ class SelectImageFragment : Fragment(R.layout.fragment_select_image) {
             this.adapter = adapter
             this.layoutManager = GridLayoutManager(requireContext(), 2)
         }
-        dataViewModel.getImageList.observe(viewLifecycleOwner, Observer{
+        dataViewModel.getImageList.observe(viewLifecycleOwner){
             it?.let {
-                adapter.imagesList=it
+                adapter.submitList(it)
             }
-        })
+        }
     }
 
 
